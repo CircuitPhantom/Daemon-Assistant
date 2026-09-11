@@ -5,10 +5,10 @@ Daemon Assistant is a terminal UI for running Ollama models with tools.
 ## Usage
 - You need Ollama installed and running on your system before using Daemon Assistant
 - Clone the repository with ``git clone https://github.com/CircuitPhantom/Daemon-Assistant.git``.
-- Go to /Daemon-Assistant ``cd ./Daemon-Assistant``.
-- Create a virtual environment it Python with ``python -m venv venv`` and activate with ``source venv/bin/activate``.  
+- Navigate into the folder with ``cd ./Daemon-Assistant``.
+- Create a virtual environment in Python with ``python -m venv venv`` and activate with ``source venv/bin/activate``.  
   *(Optional, recommended for Linux systems)*
-- Install Ollama library for Python ``pip install ollama``.
+- Install the Ollama Python library ``pip install ollama``.
 - Run the code with ``python main.py``, ``python test.py`` or ``python test2.py``.
 - Type ``/help`` for more info.
 
@@ -18,7 +18,7 @@ Daemon Assistant is a terminal UI for running Ollama models with tools.
 
 ## Tools
 Tools are defined in **tools.py**.  
-The only tool for now is ``execute_command`` that gives the model to execute commands on the system.   
+The only tool for now is ``execute_command`` that gives the model the ability to execute commands on the system.   
 
 **IMPORTANT:** Currently there is **no safety** for executing commands so be careful when using this tool!
 
@@ -31,8 +31,8 @@ Type ``/{command}`` to call a command.
 - ``/think`` toggles thinking.
 - ``/pull {model name}`` pulls a model from Ollama.
 - ``/remove {model name}`` deletes a model.
-- ``/bye`` quit code
-- ``/help`` prints help menu
+- ``/bye`` quits the program.
+- ``/help`` prints help menu.
 
 ## Model Licenses
 
