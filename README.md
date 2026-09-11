@@ -23,7 +23,7 @@ The only tool for now is ``execute_command`` that gives the model to execute com
 **IMPORTANT:** Currently there is **no safety** for executing commands so be careful when using this tool!
 
 ## Commands
-Commands are called from ``commands.py``.    
+Commands are called from **commands.py**.    
 Type ``/{command}`` to call a command.  
 
 - ``/model`` lists models, use with ``-a`` flag for detailed list.
