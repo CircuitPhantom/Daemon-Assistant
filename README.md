@@ -35,10 +35,10 @@ Type ``/{command}`` to call a command.
 
 ## Known Issue
 
-When the model fetches a very large/complex page's HTML, it sometimes stops
-answering the original question and instead starts analyzing the HTML as if
+When the model fetches a very large/complex page's HTML, it might stop
+answering the original question and instead start analyzing the HTML as if
 you had pasted the code yourself, pointing out things that "could be
-improved." This is not a bug — small pages (e.g. example.com) work fine.
+improved." This is not a bug in this program — small pages (e.g. example.com) work fine.
 It happens because once a huge HTML blob enters the context as a tool
 result, the model disproportionately focuses on the largest/most recent
 content (the HTML) instead of the original task.
