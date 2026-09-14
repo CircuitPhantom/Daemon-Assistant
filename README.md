@@ -8,19 +8,18 @@ Daemon Assistant is a terminal UI for running Ollama models with tools.
 - Navigate into the folder with ``cd ./Daemon-Assistant``.
 - Create a virtual environment in Python with ``python -m venv venv`` and activate with ``source venv/bin/activate``.  
   *(Optional, recommended for Linux systems)*
-- Install the Ollama Python library ``pip install ollama``.
-- Run the code with ``python main.py``, ``python test.py`` or ``python test2.py``.
+- Install the Ollama Python library ``pip install -r requirements``.
+- Run the code with ``python main.py``.
 - Type ``/help`` for more info.
-
-**main.py** is the simplest version with no tool calling.  
-**test.py** can call tools but can't chain them.  
-**test2.py** is the most capable version and can chain tools.
 
 ## Tools
 Tools are defined in **tools.py**.  
-The only tool for now is ``execute_command`` that gives the model the ability to execute commands on the system.   
+- ``execute_command`` gives the model the ability to execute commands on the system.   
+- ``read_file`` lets the model read files without running command.  
+- ``fetch_url`` to fetch web pages.  
 
-**IMPORTANT:** Currently there is **no safety** for executing commands so be careful when using this tool!
+**IMPORTANT:** Currently there is **no safety check** for executing commands so be careful when using ``execute_command``!  
+**Known Issue:** Model might start explaining the HTML code after fetching an URL, this is not a bug. It happens when the HTML is too long and model's content window gets full.
 
 ## Commands
 Commands are called from **commands.py**.    
@@ -31,8 +30,9 @@ Type ``/{command}`` to call a command.
 - ``/think`` toggles thinking.
 - ``/pull {model name}`` pulls a model from Ollama.
 - ``/remove {model name}`` deletes a model.
+- ``/tools`` Turn on/off specific tools.
 - ``/bye`` quits the program.
-- ``/help`` prints help menu.
+- ``/help`` for help menu.
 
 ## Model Licenses
 

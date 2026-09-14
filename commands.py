@@ -57,6 +57,7 @@ Commands:
     /think - Toggle thinking in supported models.
     /pull {model name} - Pull (install) a model.
     /remove {model name} - Remove (uninstall) a model.
+    /tools - Toggle tools.
     /bye - Quit.
 ''')
     else:
@@ -124,6 +125,6 @@ def toggle_tools():
             print(" - OFF")
         index+=1
     
-    user_input = [str(x) for x in input(":").split(',')]
+    user_input = [str(x) for x in input("Tool(s) to toggle (Seperated with comma(,).):").split(',')]
     for i in user_input:
         config.available_tools.remove(tool_number[i])
