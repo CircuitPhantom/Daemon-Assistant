@@ -1,6 +1,8 @@
 from ollama import ListResponse, list
 import ollama
+
 import config
+import tools
 
 #Call commands
 def call(msg):
@@ -32,6 +34,9 @@ def call(msg):
             ollama.delete(msg[8:])
         except ollama._types.ResponseError:
             print("Couldn't find model", msg[8:])
+    
+    elif msg == '/tools':
+        toggle_tools()
 
     elif msg == '/bye':
         print("Goodbye")
@@ -96,3 +101,29 @@ def lm(x):
         print("Choosen model:", x)
     else:
         print('Invalid model name.\nType "/models" for available models')
+
+#List and enable/disable tools
+def toggle_tools():
+    tool_list = [
+        tools.execute_command,
+        tools.read_file,
+        tools.fetch_url
+    ]
+    tool_number = {
+        '1': tools.execute_command,
+        '2': tools.read_file,
+        '3': fetch_url
+    }
+    tool_print = ['Execute Command', 'Read File', 'Fetch URL']
+    index = 0
+    for i in tool_print:
+        print(i, end='')
+        if tool_list[index] in config.available_tools:
+            print(" - ON")
+        else:
+            print(" - OFF")
+        index+=1
+    
+    user_input = [str(x) for x in input(":").split(',')]
+    for i in user_input:
+        config.available_tools.remove(tool_number[i])
