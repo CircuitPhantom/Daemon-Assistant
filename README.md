@@ -19,6 +19,7 @@ Tools are defined in **tools.py**.
 - ``fetch_url`` to fetch web pages.  
 
 **IMPORTANT:** Currently there is **no safety check** for executing commands so be careful when using ``execute_command``!  
+
 **Known Issue:** Model might start explaining the HTML code after fetching an URL, this is not a bug. It happens when the HTML is too long and model's content window gets full.
 
 ## Commands
