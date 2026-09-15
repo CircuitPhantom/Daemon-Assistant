@@ -1,5 +1,5 @@
 # Daemon Assistant
-Daemon Assistant is a terminal UI for running Ollama models with tools.
+Daemon Assistant is a terminal app for running Ollama models with tools.
 
 
 ## Usage
