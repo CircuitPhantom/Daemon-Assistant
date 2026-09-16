@@ -8,7 +8,7 @@ Daemon Assistant is a terminal app for running Ollama models with tools.
 - Navigate into the folder with ``cd ./Daemon-Assistant``.
 - Create a virtual environment in Python with ``python -m venv venv`` and activate with ``source venv/bin/activate``.  
   *(Optional, recommended for Linux systems)*
-- Install required Python libraries ``pip install -r requirements``.
+- Install required Python libraries ``pip install -r requirements.txt``.
 - Run the code with ``python main.py``.
 - Type ``/help`` for more info.
 
